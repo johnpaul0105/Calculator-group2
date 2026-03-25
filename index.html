@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+
+<div class="calculator">
+    <form method="POST">
+        <input type="text" name="display" id="display" 
+        value="<?php echo isset($_POST['display']) ? $_POST['display'] : ''; ?>" readonly>
+
+        <div>
+            <button type="button" class="btn" onclick="add('7')">7</button>
+            <button type="button" class="btn" onclick="add('8')">8</button>
+            <button type="button" class="btn" onclick="add('9')">9</button>
+            <button type="button" class="operator" onclick="add('/')">/</button>
+        </div>
+
+        <div>
+            <button type="button" class="btn" onclick="add('4')">4</button>
+            <button type="button" class="btn" onclick="add('5')">5</button>
+            <button type="button" class="btn" onclick="add('6')">6</button>
+            <button type="button" class="operator" onclick="add('*')">*</button>
+        </div>
+
+        <div>
+            <button type="button" class="btn" onclick="add('1')">1</button>
+            <button type="button" class="btn" onclick="add('2')">2</button>
+            <button type="button" class="btn" onclick="add('3')">3</button>
+            <button type="button" class="operator" onclick="add('-')">-</button>
+        </div>
+
+        <div>
+            <button type="button" class="btn" onclick="add('0')">0</button>
+            <button type="button" class="btn" onclick="add('.')">.</button>
+            <button type="submit" name="calculate" class="equal">=</button>
+            <button type="button" class="operator" onclick="add('+')">+</button>
+        </div>
+
+        <div>
+            <button type="button" class="clear" onclick="clearDisplay()">C</button>
+        </div>
+    </form>
